@@ -31,6 +31,46 @@ public class Pessoa implements Serializable {
 	
 	@ManyToMany(mappedBy="participantes")
 	private List<Projeto> participacoes;
+
+	public Pessoa() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public List<Projeto> getProjetosAutor() {
+		return projetosAutor;
+	}
+
+	public void setProjetosAutor(List<Projeto> projetosAutor) {
+		this.projetosAutor = projetosAutor;
+	}
+
+	public List<Projeto> getParticipacoes() {
+		return participacoes;
+	}
+
+	public void setParticipacoes(List<Projeto> participacoes) {
+		this.participacoes = participacoes;
+	}
+	
+	
+	
 	
 	
 	

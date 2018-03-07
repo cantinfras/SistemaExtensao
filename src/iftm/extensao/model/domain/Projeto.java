@@ -48,10 +48,73 @@ public class Projeto implements Serializable {
 	
 	@ManyToMany
 	@JoinTable(name="TB_PARTICIPANTE_PROJETO",
-	           joinColumns=
-	                 @JoinColumn(name="CD_PROJETO",
-	                 referencedColumnName="CD_PARTICIPANTE"))
+    		   joinColumns= @JoinColumn(name="CD_PROJETO"),
+    		   inverseJoinColumns = @JoinColumn(name="CD_PARTICIPANTE"))
 	private List<Pessoa> participantes;
+	
+
+	public Projeto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Date getDataInicio() {
+		return dataInicio;
+	}
+
+	public void setDataInicio(Date dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+	public Date getDataFim() {
+		return dataFim;
+	}
+
+	public void setDataFim(Date dataFim) {
+		this.dataFim = dataFim;
+	}
+
+	public Integer getQuantidadeHoras() {
+		return quantidadeHoras;
+	}
+
+	public void setQuantidadeHoras(Integer quantidadeHoras) {
+		this.quantidadeHoras = quantidadeHoras;
+	}
+
+	public Pessoa getAutor() {
+		return autor;
+	}
+
+	public void setAutor(Pessoa autor) {
+		this.autor = autor;
+	}
+
+	public List<Pessoa> getParticipantes() {
+		return participantes;
+	}
+
+	public void setParticipantes(List<Pessoa> participantes) {
+		this.participantes = participantes;
+	}
+	
+	
 	
 	
 
